@@ -109,7 +109,7 @@ requirements.txt
 sql/
   00_duckdb_compat.sql       # DuckDB-only shims for Spark functions (skip on Databricks)
   01_staging.sql             # raw CSV -> all-STRING stg_* tables
-  02_cleaning.sql            # cln_* tables (standardize, cast, nulls, dedupe, flags, RI)
+  02_cleaning.sql             # cln_* tables (standardize, cast, nulls, dedupe, flags, RI)
   03_model.sql               # star schema: fact_orders, fact_order_items, dim_date/customer/product/seller
   04_analysis.sql            # a_* KPI tables (headline, monthly, delivery, category, state/region, payment, cohort, seller)
   05_quality_checks.sql      # dq_row_counts, dq_null_rates, dq_issues, dq_assertions
@@ -143,3 +143,27 @@ The scripts 02-05 are Spark SQL. DuckDB runs them after `00_duckdb_compat.sql` d
 * 2016 and Sep/Oct 2018 are sparse in the source, so trend charts use 2017-01 .. 2018-08.
 
 Data (c) Olist, CC BY-NC-SA 4.0. Code: MIT.
+
+## Complete dataset
+
+The full original dataset is available from the [Kaggle page](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce). It is licensed **CC BY-NC-SA 4.0**. The full dataset is about **63.4 MB across 9 CSVs**; this repository's `data/raw/` contains only a sample.
+
+The exact public mirror base URL used by `scripts/download_full_data.py` is:
+`https://raw.githubusercontent.com/0PeterAdel/Brazilian-ECommerce/master/0.DataSet/`
+
+The script downloads these files from that mirror:
+- [`olist_customers_dataset.csv`](https://raw.githubusercontent.com/0PeterAdel/Brazilian-ECommerce/master/0.DataSet/olist_customers_dataset.csv)
+- [`olist_order_items_dataset.csv`](https://raw.githubusercontent.com/0PeterAdel/Brazilian-ECommerce/master/0.DataSet/olist_order_items_dataset.csv)
+- [`olist_order_payments_dataset.csv`](https://raw.githubusercontent.com/0PeterAdel/Brazilian-ECommerce/master/0.DataSet/olist_order_payments_dataset.csv)
+- [`olist_order_reviews_dataset.csv`](https://raw.githubusercontent.com/0PeterAdel/Brazilian-ECommerce/master/0.DataSet/olist_order_reviews_dataset.csv)
+- [`olist_orders_dataset.csv`](https://raw.githubusercontent.com/0PeterAdel/Brazilian-ECommerce/master/0.DataSet/olist_orders_dataset.csv)
+- [`olist_products_dataset.csv`](https://raw.githubusercontent.com/0PeterAdel/Brazilian-ECommerce/master/0.DataSet/olist_products_dataset.csv)
+- [`olist_sellers_dataset.csv`](https://raw.githubusercontent.com/0PeterAdel/Brazilian-ECommerce/master/0.DataSet/olist_sellers_dataset.csv)
+- [`product_category_name_translation.csv`](https://raw.githubusercontent.com/0PeterAdel/Brazilian-ECommerce/master/0.DataSet/product_category_name_translation.csv)
+
+The ninth original Kaggle CSV is `olist_geolocation_dataset.csv`; it is not downloaded or used by this repository's script.
+
+Run:
+```bash
+python scripts/download_full_data.py
+```
