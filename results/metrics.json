@@ -1,0 +1,192 @@
+{
+  "project": "da-learn-01-ecommerce-sales-analysis",
+  "dataset": "Olist Brazilian E-Commerce Public Dataset (Kaggle: olistbr/brazilian-ecommerce, CC BY-NC-SA 4.0)",
+  "source_mode": "full",
+  "order_window": {
+    "first_order": "2016-09-04T21:15:19",
+    "last_order": "2018-10-17T17:30:18"
+  },
+  "currency": "BRL",
+  "kpis": {
+    "orders_total": 99441,
+    "revenue_orders": 98199,
+    "delivered_orders": 96470,
+    "gmv_brl": 15735527.03,
+    "product_revenue_brl": 13494400.74,
+    "freight_revenue_brl": 2241126.29,
+    "aov_brl": 160.24,
+    "items_per_order": 1.142,
+    "unique_customers": 94983,
+    "repeat_customer_pct": 3.04,
+    "avg_review_score": 4.086,
+    "low_review_pct": 14.69,
+    "avg_delivery_days": 12.57,
+    "median_delivery_days": 10.23,
+    "late_delivery_pct": 6.77,
+    "cancel_pct": 0.63
+  },
+  "data_quality": {
+    "row_counts": [
+      {
+        "entity": "orders",
+        "raw_rows": 99441,
+        "distinct_keys": 99441,
+        "clean_rows": 99441,
+        "grain": "order_id"
+      },
+      {
+        "entity": "order_items",
+        "raw_rows": 112650,
+        "distinct_keys": 112650,
+        "clean_rows": 112650,
+        "grain": "order_id + order_item_id"
+      },
+      {
+        "entity": "payments",
+        "raw_rows": 103886,
+        "distinct_keys": 103886,
+        "clean_rows": 103886,
+        "grain": "order_id + payment_sequential"
+      },
+      {
+        "entity": "reviews",
+        "raw_rows": 99224,
+        "distinct_keys": 98673,
+        "clean_rows": 98673,
+        "grain": "order_id (latest review kept)"
+      },
+      {
+        "entity": "customers",
+        "raw_rows": 99441,
+        "distinct_keys": 99441,
+        "clean_rows": 99441,
+        "grain": "customer_id"
+      },
+      {
+        "entity": "products",
+        "raw_rows": 32951,
+        "distinct_keys": 32951,
+        "clean_rows": 32951,
+        "grain": "product_id"
+      },
+      {
+        "entity": "sellers",
+        "raw_rows": 3095,
+        "distinct_keys": 3095,
+        "clean_rows": 3095,
+        "grain": "seller_id"
+      },
+      {
+        "entity": "fact_order_items",
+        "raw_rows": null,
+        "distinct_keys": null,
+        "clean_rows": 112650,
+        "grain": "order line"
+      },
+      {
+        "entity": "fact_orders",
+        "raw_rows": null,
+        "distinct_keys": null,
+        "clean_rows": 99441,
+        "grain": "order"
+      }
+    ],
+    "null_rates": [
+      {
+        "entity": "orders",
+        "column_name": "order_approved_at",
+        "raw_null_pct": 0.161,
+        "clean_null_pct": 0.161,
+        "treatment": "kept NULL (not yet approved)"
+      },
+      {
+        "entity": "orders",
+        "column_name": "order_delivered_customer_date",
+        "raw_null_pct": 2.982,
+        "clean_null_pct": 2.982,
+        "treatment": "kept NULL; is_delivered = 0"
+      },
+      {
+        "entity": "products",
+        "column_name": "product_category_name",
+        "raw_null_pct": 1.851,
+        "clean_null_pct": 0.0,
+        "treatment": "filled with unknown + dq_missing_category flag"
+      },
+      {
+        "entity": "products",
+        "column_name": "product_weight_g",
+        "raw_null_pct": 0.006,
+        "clean_null_pct": 0.018,
+        "treatment": "0 g set to NULL; NULL kept"
+      },
+      {
+        "entity": "reviews",
+        "column_name": "review_comment_message",
+        "raw_null_pct": 58.712,
+        "clean_null_pct": 56.94,
+        "treatment": "text dropped; has_comment (title or message) + comment_length kept"
+      },
+      {
+        "entity": "payments",
+        "column_name": "payment_type = not_defined",
+        "raw_null_pct": 0.003,
+        "clean_null_pct": 0.0,
+        "treatment": "recoded to unknown"
+      }
+    ],
+    "issues": {
+      "reviews: orders with >1 review (older ones dropped)": 551,
+      "reviews: review_id reused across orders": 814,
+      "customers: city text changed by trim/lower/accent standardization": 0,
+      "customers: distinct city spellings raw": 4119,
+      "customers: distinct city spellings clean": 4119,
+      "sellers: distinct city spellings raw": 611,
+      "sellers: distinct city spellings clean": 611,
+      "products: missing category -> unknown": 610,
+      "products: category without English translation": 13,
+      "products: weight 0 g -> NULL": 4,
+      "payments: not_defined type -> unknown": 3,
+      "payments: 0 installments -> 1": 2,
+      "payments: zero-value rows (vouchers)": 9,
+      "orders: delivered status but no delivery date": 8,
+      "orders: timestamps before purchase (excluded from delivery KPIs)": 166,
+      "orders: no order items (revenue = 0)": 775,
+      "orders: no payment rows": 1,
+      "orders: |payment - (price+freight)| > 1 BRL": 1021,
+      "items: price outlier (> Q3 + 3*IQR)": 4074,
+      "items: price in top 1%": 1117,
+      "items: freight > price": 4124,
+      "RI: items with unknown order": 0,
+      "RI: items with unknown product": 0,
+      "RI: items with unknown seller": 0,
+      "RI: orders with unknown customer": 0,
+      "RI: payments with unknown order": 0,
+      "RI: reviews with unknown order": 0
+    },
+    "assertions": {
+      "fact_orders.order_id unique": "PASS",
+      "fact_order_items (order_id, order_item_id) unique": "PASS",
+      "fact_order_items.product_id -> dim_product": "PASS",
+      "fact_order_items.seller_id -> dim_seller": "PASS",
+      "fact_orders.customer_id -> dim_customer": "PASS",
+      "fact_orders.order_date_key -> dim_date": "PASS",
+      "review_score in 1..5": "PASS",
+      "price > 0": "PASS",
+      "no NULL purchase_ts": "PASS",
+      "categories trimmed/lowercase": "PASS"
+    }
+  },
+  "engine": {
+    "duckdb": "1.5.6",
+    "python": "3.13.5"
+  },
+  "sql_timings_s": {
+    "00_duckdb_compat.sql": 0.001,
+    "01_staging.sql": 0.428,
+    "02_cleaning.sql": 0.899,
+    "03_model.sql": 0.315,
+    "04_analysis.sql": 0.163,
+    "05_quality_checks.sql": 0.089
+  }
+}
