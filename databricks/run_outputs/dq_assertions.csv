@@ -1,0 +1,11 @@
+check_name,failed_rows,status
+categories trimmed/lowercase,0,PASS
+"fact_order_items (order_id, order_item_id) unique",0,PASS
+fact_order_items.product_id -> dim_product,0,PASS
+fact_order_items.seller_id -> dim_seller,0,PASS
+fact_orders.customer_id -> dim_customer,0,PASS
+fact_orders.order_date_key -> dim_date,0,PASS
+fact_orders.order_id unique,0,PASS
+no NULL purchase_ts,0,PASS
+price > 0,0,PASS
+review_score in 1..5,0,PASS

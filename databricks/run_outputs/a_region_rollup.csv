@@ -1,0 +1,6 @@
+customer_region,orders,gmv_brl,gmv_share_pct,avg_delivery_days,late_pct,avg_review
+Center-West,5728,1013752.38,6.44,15.04,6.53,4.091
+North,1834,409725.36,2.60,22.61,8.57,3.98
+Northeast,9305,1872583.31,11.90,20.01,12.72,3.915
+South,13996,2279510.90,14.49,14.05,5.90,4.16
+Southeast,67336,10159955.08,64.57,10.76,6.12,4.141
