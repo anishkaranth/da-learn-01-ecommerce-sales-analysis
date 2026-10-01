@@ -1,0 +1,50 @@
+// measures.dax - key DAX measures for the Olist star schema (create in a "_Measures" table)
+// Revenue logic = same as sql/04_analysis.sql: price + freight of orders that are not canceled/unavailable.
+
+GMV = CALCULATE ( SUM ( fact_orders[order_value] ), fact_orders[is_revenue_order] = 1 )
+Product Revenue = CALCULATE ( SUM ( fact_orders[items_value] ), fact_orders[is_revenue_order] = 1 )
+Freight Revenue = CALCULATE ( SUM ( fact_orders[freight_value] ), fact_orders[is_revenue_order] = 1 )
+Freight Share % = DIVIDE ( [Freight Revenue], [GMV] )
+
+Orders = COUNTROWS ( fact_orders )
+Revenue Orders = CALCULATE ( COUNTROWS ( fact_orders ), fact_orders[is_revenue_order] = 1, fact_orders[items_qty] > 0 )
+AOV = DIVIDE ( [GMV], [Revenue Orders] )
+Items per Order = DIVIDE ( CALCULATE ( SUM ( fact_orders[items_qty] ), fact_orders[is_revenue_order] = 1 ), [Revenue Orders] )
+Cancel Rate % = DIVIDE ( CALCULATE ( COUNTROWS ( fact_orders ), fact_orders[order_status] = "canceled" ), [Orders] )
+
+Customers = CALCULATE ( DISTINCTCOUNT ( fact_orders[customer_unique_id] ), fact_orders[is_revenue_order] = 1, fact_orders[items_qty] > 0 )
+Repeat Customers =
+    COUNTROWS (
+        FILTER (
+            VALUES ( fact_orders[customer_unique_id] ),
+            CALCULATE ( COUNTROWS ( fact_orders ), fact_orders[is_revenue_order] = 1, fact_orders[items_qty] > 0 ) > 1
+        )
+    )
+Repeat Customer % = DIVIDE ( [Repeat Customers], [Customers] )
+
+Avg Review = AVERAGE ( fact_orders[review_score] )
+Low Review % = DIVIDE ( CALCULATE ( COUNT ( fact_orders[review_score] ), fact_orders[review_score] <= 2 ), COUNT ( fact_orders[review_score] ) )
+
+Delivered Orders = CALCULATE ( COUNTROWS ( fact_orders ), fact_orders[is_delivered] = 1 )
+Avg Delivery Days = CALCULATE ( AVERAGE ( fact_orders[delivery_days] ), fact_orders[is_delivered] = 1, fact_orders[dq_bad_chronology] = 0 )
+Median Delivery Days = CALCULATE ( MEDIAN ( fact_orders[delivery_days] ), fact_orders[is_delivered] = 1, fact_orders[dq_bad_chronology] = 0 )
+Late Delivery % = CALCULATE ( DIVIDE ( SUM ( fact_orders[is_late] ), COUNT ( fact_orders[is_late] ) ), fact_orders[is_delivered] = 1 )
+
+// time intelligence (requires dim_date marked as date table on dim_date[calendar_date])
+GMV PM = CALCULATE ( [GMV], DATEADD ( dim_date[calendar_date], -1, MONTH ) )
+GMV MoM % = DIVIDE ( [GMV] - [GMV PM], [GMV PM] )
+GMV PY = CALCULATE ( [GMV], SAMEPERIODLASTYEAR ( dim_date[calendar_date] ) )
+GMV YoY % = DIVIDE ( [GMV] - [GMV PY], [GMV PY] )
+GMV YTD = TOTALYTD ( [GMV], dim_date[calendar_date] )
+
+// line-level (fact_order_items) - category / seller visuals
+Item GMV = CALCULATE ( SUM ( fact_order_items[item_total] ), fact_order_items[is_revenue_order] = 1 )
+Items Sold = CALCULATE ( COUNTROWS ( fact_order_items ), fact_order_items[is_revenue_order] = 1 )
+Avg Item Price = CALCULATE ( AVERAGE ( fact_order_items[price] ), fact_order_items[is_revenue_order] = 1 )
+Item GMV Share % = DIVIDE ( [Item GMV], CALCULATE ( [Item GMV], ALL ( dim_product ) ) )
+Active Sellers = CALCULATE ( DISTINCTCOUNT ( fact_order_items[seller_id] ), fact_order_items[is_revenue_order] = 1 )
+Price Outlier Items = SUM ( fact_order_items[is_price_outlier_iqr3] )
+
+// cohort retention (matrix: rows dim_customer[cohort_month], columns = Months Since First table, see BUILD_GUIDE step 6)
+Cohort Size =
+    CALCULATE ( DISTINCTCOUNT ( dim_customer[customer_unique_id] ), fact_orders[is_first_month_order] = 1 )

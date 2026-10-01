@@ -1,0 +1,2 @@
+orders_total,revenue_orders,delivered_orders,gmv_brl,product_revenue_brl,freight_revenue_brl,aov_brl,items_per_order,unique_customers,repeat_customer_pct,avg_review_score,low_review_pct,avg_delivery_days,median_delivery_days,late_delivery_pct,cancel_pct
+99441,98199,96470,15735527.03,13494400.74,2241126.29,160.24,1.142,94983,3.04,4.086,14.69,12.57,10.23,6.77,0.63

@@ -1,0 +1,46 @@
+{
+  "snapshot": "headline KPIs + run config",
+  "source_mode": "full",
+  "config": {
+    "engine": "duckdb 1.5.6",
+    "sql_dialect": "Spark/Databricks SQL (+ DuckDB shims in 00)",
+    "revenue_definition": "price + freight, orders not canceled/unavailable",
+    "trend_window": "2017-01..2018-08",
+    "outlier_rule": "price > Q3 + 3*IQR",
+    "review_dedupe": "latest answered review per order"
+  },
+  "headline": {
+    "orders_total": 99441,
+    "revenue_orders": 98199,
+    "gmv_brl": 15735527.03,
+    "aov_brl": 160.24,
+    "unique_customers": 94983,
+    "repeat_customer_pct": 3.04,
+    "avg_review_score": 4.086,
+    "avg_delivery_days": 12.57,
+    "late_delivery_pct": 6.77
+  },
+  "late_vs_on_time_review": {
+    "on_time": 4.29,
+    "late": 2.27
+  },
+  "top3_categories_by_gmv": [
+    {
+      "category_en": "health_beauty",
+      "gmv_brl": 1437665.78,
+      "gmv_share_pct": 9.14
+    },
+    {
+      "category_en": "watches_gifts",
+      "gmv_brl": 1298292.47,
+      "gmv_share_pct": 8.25
+    },
+    {
+      "category_en": "bed_bath_table",
+      "gmv_brl": 1240386.13,
+      "gmv_share_pct": 7.88
+    }
+  ],
+  "assertions_passed": 10,
+  "assertions_total": 10
+}

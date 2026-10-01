@@ -1,0 +1,7 @@
+entity,column_name,raw_null_pct,clean_null_pct,treatment
+orders,order_approved_at,0.161,0.161,kept NULL (not yet approved)
+orders,order_delivered_customer_date,2.982,2.982,kept NULL; is_delivered = 0
+payments,payment_type = not_defined,0.003,0.0,recoded to unknown
+products,product_category_name,1.851,0.0,filled with unknown + dq_missing_category flag
+products,product_weight_g,0.006,0.018,0 g set to NULL; NULL kept
+reviews,review_comment_message,58.712,56.94,text dropped; has_comment (title or message) + comment_length kept

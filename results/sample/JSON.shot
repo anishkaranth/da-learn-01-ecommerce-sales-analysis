@@ -1,0 +1,46 @@
+{
+  "snapshot": "headline KPIs + run config",
+  "source_mode": "sample",
+  "config": {
+    "engine": "duckdb 1.5.6",
+    "sql_dialect": "Spark/Databricks SQL (+ DuckDB shims in 00)",
+    "revenue_definition": "price + freight, orders not canceled/unavailable",
+    "trend_window": "2017-01..2018-08",
+    "outlier_rule": "price > Q3 + 3*IQR",
+    "review_dedupe": "latest answered review per order"
+  },
+  "headline": {
+    "orders_total": 22,
+    "revenue_orders": 22,
+    "gmv_brl": 3652.99,
+    "aov_brl": 166.05,
+    "unique_customers": 22,
+    "repeat_customer_pct": 0.0,
+    "avg_review_score": 4.045,
+    "avg_delivery_days": 9.62,
+    "late_delivery_pct": 4.55
+  },
+  "late_vs_on_time_review": {
+    "on_time": 4.095,
+    "late": 3.0
+  },
+  "top3_categories_by_gmv": [
+    {
+      "category_en": "garden_tools",
+      "gmv_brl": 1225.33,
+      "gmv_share_pct": 33.54
+    },
+    {
+      "category_en": "consoles_games",
+      "gmv_brl": 650.34,
+      "gmv_share_pct": 17.8
+    },
+    {
+      "category_en": "pet_shop",
+      "gmv_brl": 259.83,
+      "gmv_share_pct": 7.11
+    }
+  ],
+  "assertions_passed": 10,
+  "assertions_total": 10
+}

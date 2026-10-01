@@ -1,0 +1,10 @@
+entity,raw_rows,distinct_keys,clean_rows,grain
+customers,99441,99441,99441,customer_id
+fact_order_items,,,112650,order line
+fact_orders,,,99441,order
+order_items,112650,112650,112650,order_id + order_item_id
+orders,99441,99441,99441,order_id
+payments,103886,103886,103886,order_id + payment_sequential
+products,32951,32951,32951,product_id
+reviews,99224,98673,98673,order_id (latest review kept)
+sellers,3095,3095,3095,seller_id

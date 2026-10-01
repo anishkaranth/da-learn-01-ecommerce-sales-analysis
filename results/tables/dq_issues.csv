@@ -1,0 +1,28 @@
+check_name,affected_rows
+RI: items with unknown order,0
+RI: items with unknown product,0
+RI: items with unknown seller,0
+RI: orders with unknown customer,0
+RI: payments with unknown order,0
+RI: reviews with unknown order,0
+customers: city text changed by trim/lower/accent standardization,0
+customers: distinct city spellings clean,4119
+customers: distinct city spellings raw,4119
+items: freight > price,4124
+items: price in top 1%,1117
+items: price outlier (> Q3 + 3*IQR),4074
+orders: delivered status but no delivery date,8
+orders: no order items (revenue = 0),775
+orders: no payment rows,1
+orders: timestamps before purchase (excluded from delivery KPIs),166
+orders: |payment - (price+freight)| > 1 BRL,1021
+payments: 0 installments -> 1,2
+payments: not_defined type -> unknown,3
+payments: zero-value rows (vouchers),9
+products: category without English translation,13
+products: missing category -> unknown,610
+products: weight 0 g -> NULL,4
+reviews: orders with >1 review (older ones dropped),551
+reviews: review_id reused across orders,814
+sellers: distinct city spellings clean,611
+sellers: distinct city spellings raw,611
