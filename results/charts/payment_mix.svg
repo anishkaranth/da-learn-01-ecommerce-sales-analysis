@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="408.699453pt" height="244.191016pt" viewBox="0 0 408.699453 244.191016" version="1.1" font-family="sans-serif">
+<defs>
+<style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+</defs>
+<path d="M 0 244 L 409 244 L 409 0 L 0 0 z" style="fill:#ffffff"/>
+<path d="M 44 221 L 401 221 L 401 21 L 44 21 z" style="fill:#ffffff"/>
+<path d="M 61 221 L 129 221 L 129 70 L 61 70 z" style="fill:#1f6f8b"/>
+<path d="M 146 221 L 214 221 L 214 181 L 146 181 z" style="fill:#e07a5f"/>
+<path d="M 231 221 L 300 221 L 300 215 L 231 215 z" style="fill:#81b29a"/>
+<path d="M 317 221 L 385 221 L 385 218 L 317 218 z" style="fill:#999999"/>
+<defs>
+<path id="m4a50907bee" d="M 0 0 L 0 4" style="stroke:#000000;stroke-width:0.8"/>
+</defs>
+<use xlink:href="#m4a50907bee" x="95" y="221" style="stroke:#000000;stroke-width:0.8"/>
+<text style="font-size:9px; text-anchor:middle" x="95" y="235">credit_card</text>
+<use xlink:href="#m4a50907bee" x="180" y="221" style="stroke:#000000;stroke-width:0.8"/>
+<text style="font-size:9px; text-anchor:middle" x="180" y="235">boleto</text>
+<use xlink:href="#m4a50907bee" x="266" y="221" style="stroke:#000000;stroke-width:0.8"/>
+<text style="font-size:9px; text-anchor:middle" x="266" y="235">voucher</text>
+<use xlink:href="#m4a50907bee" x="351" y="221" style="stroke:#000000;stroke-width:0.8"/>
+<text style="font-size:9px; text-anchor:middle" x="351" y="235">debit_card</text>
+<defs>
+<path id="mc59aca4170" d="M 0 0 L -4 0" style="stroke:#000000;stroke-width:0.8"/>
+</defs>
+<use xlink:href="#mc59aca4170" x="44" y="221" style="stroke:#000000;stroke-width:0.8"/>
+<text style="font-size:9px; text-anchor:end" x="37" y="224">0</text>
+<use xlink:href="#mc59aca4170" x="44" y="181" style="stroke:#000000;stroke-width:0.8"/>
+<text style="font-size:9px; text-anchor:end" x="37" y="184">20</text>
+<use xlink:href="#mc59aca4170" x="44" y="141" style="stroke:#000000;stroke-width:0.8"/>
+<text style="font-size:9px; text-anchor:end" x="37" y="145">40</text>
+<use xlink:href="#mc59aca4170" x="44" y="101" style="stroke:#000000;stroke-width:0.8"/>
+<text style="font-size:9px; text-anchor:end" x="37" y="105">60</text>
+<use xlink:href="#mc59aca4170" x="44" y="61" style="stroke:#000000;stroke-width:0.8"/>
+<text style="font-size:9px; text-anchor:end" x="37" y="65">80</text>
+<use xlink:href="#mc59aca4170" x="44" y="21" style="stroke:#000000;stroke-width:0.8"/>
+<text style="font-size:9px; text-anchor:end" x="37" y="25">100</text>
+<text style="font-size:9px; text-anchor:middle" x="14" y="121" transform="rotate(-90 14 121)">% of orders</text>
+<path d="M 44 221 L 44 21" style="fill:none;stroke:#000000;stroke-width:0.8;stroke-linejoin:miter;stroke-linecap:square"/>
+<path d="M 44 221 L 401 221" style="fill:none;stroke:#000000;stroke-width:0.8;stroke-linejoin:miter;stroke-linecap:square"/>
+<text style="font-size:7px" transform="translate(84 60)">75.5%</text>
+<text style="font-size:7px" transform="translate(81 68)">3.5 inst.</text>
+<text style="font-size:7px" transform="translate(169 171)">19.9%</text>
+<text style="font-size:7px" transform="translate(166 179)">1.0 inst.</text>
+<text style="font-size:7px" transform="translate(257 204)">3.1%</text>
+<text style="font-size:7px" transform="translate(251 213)">1.1 inst.</text>
+<text style="font-size:7px" transform="translate(342 208)">1.5%</text>
+<text style="font-size:7px" transform="translate(337 216)">1.0 inst.</text>
+<text style="font-size:10.8px; text-anchor:middle" x="223" y="15">Payment mix (main payment type)</text>
+</svg>

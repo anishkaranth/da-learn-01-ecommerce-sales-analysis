@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="397.246953pt" height="257.191719pt" viewBox="0 0 397.246953 257.191719" version="1.1" font-family="sans-serif">
+<defs>
+<style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+</defs>
+<path d="M 0 257 L 397 257 L 397 0 L 0 0 z" style="fill:#ffffff"/>
+<path d="M 33 221 L 390 221 L 390 21 L 33 21 z" style="fill:#ffffff"/>
+<path d="M 49 221 L 94 221 L 94 55 L 49 55 z" style="fill:#1f6f8b"/>
+<path d="M 105 221 L 150 221 L 150 58 L 105 58 z" style="fill:#1f6f8b"/>
+<path d="M 161 221 L 206 221 L 206 62 L 161 62 z" style="fill:#1f6f8b"/>
+<path d="M 217 221 L 262 221 L 262 68 L 217 68 z" style="fill:#1f6f8b"/>
+<path d="M 273 221 L 318 221 L 318 88 L 273 88 z" style="fill:#1f6f8b"/>
+<path d="M 329 221 L 374 221 L 374 138 L 329 138 z" style="fill:#1f6f8b"/>
+<defs>
+<path id="m6a6dd500a2" d="M 0 0 L 0 4" style="stroke:#000000;stroke-width:0.8"/>
+</defs>
+<use xlink:href="#m6a6dd500a2" x="72" y="221" style="stroke:#000000;stroke-width:0.8"/>
+<text style="font-size:9px; text-anchor:middle" x="72" y="235">&lt;3 d</text>
+<use xlink:href="#m6a6dd500a2" x="128" y="221" style="stroke:#000000;stroke-width:0.8"/>
+<text style="font-size:9px; text-anchor:middle" x="128" y="235">3-7 d</text>
+<use xlink:href="#m6a6dd500a2" x="183" y="221" style="stroke:#000000;stroke-width:0.8"/>
+<text style="font-size:9px; text-anchor:middle" x="183" y="235">7-14 d</text>
+<use xlink:href="#m6a6dd500a2" x="239" y="221" style="stroke:#000000;stroke-width:0.8"/>
+<text style="font-size:9px; text-anchor:middle" x="239" y="235">14-21 d</text>
+<use xlink:href="#m6a6dd500a2" x="295" y="221" style="stroke:#000000;stroke-width:0.8"/>
+<text style="font-size:9px; text-anchor:middle" x="295" y="235">21-30 d</text>
+<use xlink:href="#m6a6dd500a2" x="351" y="221" style="stroke:#000000;stroke-width:0.8"/>
+<text style="font-size:9px; text-anchor:middle" x="351" y="235">30+ d</text>
+<text style="font-size:9px; text-anchor:middle" x="211" y="248">days from purchase to delivery</text>
+<defs>
+<path id="mb607907f70" d="M 0 0 L -4 0" style="stroke:#000000;stroke-width:0.8"/>
+</defs>
+<use xlink:href="#mb607907f70" x="33" y="221" style="stroke:#000000;stroke-width:0.8"/>
+<text style="font-size:9px; text-anchor:end" x="26" y="224">0</text>
+<use xlink:href="#mb607907f70" x="33" y="184" style="stroke:#000000;stroke-width:0.8"/>
+<text style="font-size:9px; text-anchor:end" x="26" y="187">1</text>
+<use xlink:href="#mb607907f70" x="33" y="147" style="stroke:#000000;stroke-width:0.8"/>
+<text style="font-size:9px; text-anchor:end" x="26" y="150">2</text>
+<use xlink:href="#mb607907f70" x="33" y="110" style="stroke:#000000;stroke-width:0.8"/>
+<text style="font-size:9px; text-anchor:end" x="26" y="114">3</text>
+<use xlink:href="#mb607907f70" x="33" y="73" style="stroke:#000000;stroke-width:0.8"/>
+<text style="font-size:9px; text-anchor:end" x="26" y="77">4</text>
+<use xlink:href="#mb607907f70" x="33" y="36" style="stroke:#000000;stroke-width:0.8"/>
+<text style="font-size:9px; text-anchor:end" x="26" y="40">5</text>
+<text style="font-size:9px; text-anchor:middle" x="14" y="121" transform="rotate(-90 14 121)">avg review (1-5)</text>
+<path d="M 33 221 L 33 21" style="fill:none;stroke:#000000;stroke-width:0.8;stroke-linejoin:miter;stroke-linecap:square"/>
+<path d="M 33 221 L 390 221" style="fill:none;stroke:#000000;stroke-width:0.8;stroke-linejoin:miter;stroke-linecap:square"/>
+<text style="font-size:7px" transform="translate(64 45)">4.48</text>
+<text style="font-size:7px" transform="translate(59 53)">7% low</text>
+<text style="font-size:7px" transform="translate(120 48)">4.40</text>
+<text style="font-size:7px" transform="translate(115 56)">8% low</text>
+<text style="font-size:7px" transform="translate(176 51)">4.31</text>
+<text style="font-size:7px" transform="translate(171 60)">9% low</text>
+<text style="font-size:7px" transform="translate(232 58)">4.14</text>
+<text style="font-size:7px" transform="translate(225 66)">12% low</text>
+<text style="font-size:7px" transform="translate(288 77)">3.61</text>
+<text style="font-size:7px" transform="translate(281 86)">24% low</text>
+<text style="font-size:7px" transform="translate(344 127)">2.25</text>
+<text style="font-size:7px" transform="translate(337 136)">63% low</text>
+<text style="font-size:10.8px; text-anchor:middle" x="211" y="15">Delivery time vs review score</text>
+</svg>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="483.374219pt" height="257.237563pt" viewBox="0 0 483.374219 257.237563" version="1.1" font-family="sans-serif">
+<defs>
+<style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+</defs>
+<path d="M -0 257 L 483 257 L 483 0 L -0 0 z" style="fill:#ffffff"/>
+<path d="M 119 221 L 476 221 L 476 21 L 119 21 z" style="fill:#ffffff"/>
+<path d="M 119 212 L 218 212 L 218 197 L 119 197 z" style="fill:#81b29a"/>
+<path d="M 119 193 L 235 193 L 235 179 L 119 179 z" style="fill:#81b29a"/>
+<path d="M 119 175 L 240 175 L 240 160 L 119 160 z" style="fill:#81b29a"/>
+<path d="M 119 156 L 251 156 L 251 142 L 119 142 z" style="fill:#81b29a"/>
+<path d="M 119 138 L 273 138 L 273 123 L 119 123 z" style="fill:#81b29a"/>
+<path d="M 119 119 L 299 119 L 299 105 L 119 105 z" style="fill:#81b29a"/>
+<path d="M 119 101 L 316 101 L 316 86 L 119 86 z" style="fill:#81b29a"/>
+<path d="M 119 82 L 332 82 L 332 68 L 119 68 z" style="fill:#81b29a"/>
+<path d="M 119 64 L 341 64 L 341 49 L 119 49 z" style="fill:#81b29a"/>
+<path d="M 119 45 L 365 45 L 365 31 L 119 31 z" style="fill:#81b29a"/>
+<defs>
+<path id="m30b52bc6f6" d="M 0 0 L 0 4" style="stroke:#000000;stroke-width:0.8"/>
+</defs>
+<use xlink:href="#m30b52bc6f6" x="119" y="221" style="stroke:#000000;stroke-width:0.8"/>
+<text style="font-size:9px; text-anchor:middle" x="119" y="235">0.00</text>
+<use xlink:href="#m30b52bc6f6" x="162" y="221" style="stroke:#000000;stroke-width:0.8"/>
+<text style="font-size:9px; text-anchor:middle" x="162" y="235">0.25</text>
+<use xlink:href="#m30b52bc6f6" x="205" y="221" style="stroke:#000000;stroke-width:0.8"/>
+<text style="font-size:9px; text-anchor:middle" x="205" y="235">0.50</text>
+<use xlink:href="#m30b52bc6f6" x="248" y="221" style="stroke:#000000;stroke-width:0.8"/>
+<text style="font-size:9px; text-anchor:middle" x="248" y="235">0.75</text>
+<use xlink:href="#m30b52bc6f6" x="290" y="221" style="stroke:#000000;stroke-width:0.8"/>
+<text style="font-size:9px; text-anchor:middle" x="290" y="235">1.00</text>
+<use xlink:href="#m30b52bc6f6" x="333" y="221" style="stroke:#000000;stroke-width:0.8"/>
+<text style="font-size:9px; text-anchor:middle" x="333" y="235">1.25</text>
+<use xlink:href="#m30b52bc6f6" x="376" y="221" style="stroke:#000000;stroke-width:0.8"/>
+<text style="font-size:9px; text-anchor:middle" x="376" y="235">1.50</text>
+<use xlink:href="#m30b52bc6f6" x="419" y="221" style="stroke:#000000;stroke-width:0.8"/>
+<text style="font-size:9px; text-anchor:middle" x="419" y="235">1.75</text>
+<use xlink:href="#m30b52bc6f6" x="462" y="221" style="stroke:#000000;stroke-width:0.8"/>
+<text style="font-size:9px; text-anchor:middle" x="462" y="235">2.00</text>
+<text style="font-size:9px; text-anchor:middle" x="298" y="248">GMV (BRL m)</text>
+<defs>
+<path id="me804bada7a" d="M 0 0 L -4 0" style="stroke:#000000;stroke-width:0.8"/>
+</defs>
+<use xlink:href="#me804bada7a" x="119" y="205" style="stroke:#000000;stroke-width:0.8"/>
+<text style="font-size:9px; text-anchor:end" x="112" y="208">garden_tools</text>
+<use xlink:href="#me804bada7a" x="119" y="186" style="stroke:#000000;stroke-width:0.8"/>
+<text style="font-size:9px; text-anchor:end" x="112" y="189">auto</text>
+<use xlink:href="#me804bada7a" x="119" y="168" style="stroke:#000000;stroke-width:0.8"/>
+<text style="font-size:9px; text-anchor:end" x="112" y="171">cool_stuff</text>
+<use xlink:href="#me804bada7a" x="119" y="149" style="stroke:#000000;stroke-width:0.8"/>
+<text style="font-size:9px; text-anchor:end" x="112" y="152">housewares</text>
+<use xlink:href="#me804bada7a" x="119" y="131" style="stroke:#000000;stroke-width:0.8"/>
+<text style="font-size:9px; text-anchor:end" x="112" y="134">furniture_decor</text>
+<use xlink:href="#me804bada7a" x="119" y="112" style="stroke:#000000;stroke-width:0.8"/>
+<text style="font-size:9px; text-anchor:end" x="112" y="115">computers_accessories</text>
+<use xlink:href="#me804bada7a" x="119" y="93" style="stroke:#000000;stroke-width:0.8"/>
+<text style="font-size:9px; text-anchor:end" x="112" y="97">sports_leisure</text>
+<use xlink:href="#me804bada7a" x="119" y="75" style="stroke:#000000;stroke-width:0.8"/>
+<text style="font-size:9px; text-anchor:end" x="112" y="78">bed_bath_table</text>
+<use xlink:href="#me804bada7a" x="119" y="56" style="stroke:#000000;stroke-width:0.8"/>
+<text style="font-size:9px; text-anchor:end" x="112" y="60">watches_gifts</text>
+<use xlink:href="#me804bada7a" x="119" y="38" style="stroke:#000000;stroke-width:0.8"/>
+<text style="font-size:9px; text-anchor:end" x="112" y="41">health_beauty</text>
+<path d="M 119 221 L 119 21" style="fill:none;stroke:#000000;stroke-width:0.8;stroke-linejoin:miter;stroke-linecap:square"/>
+<path d="M 119 221 L 476 221" style="fill:none;stroke:#000000;stroke-width:0.8;stroke-linejoin:miter;stroke-linecap:square"/>
+<text style="font-size:7px; text-anchor:start" x="218" y="206"> 0.58m | 4.13*</text>
+<text style="font-size:7px; text-anchor:start" x="235" y="188"> 0.68m | 4.07*</text>
+<text style="font-size:7px; text-anchor:start" x="240" y="169"> 0.70m | 4.17*</text>
+<text style="font-size:7px; text-anchor:start" x="251" y="151"> 0.77m | 4.12*</text>
+<text style="font-size:7px; text-anchor:start" x="273" y="132"> 0.90m | 3.98*</text>
+<text style="font-size:7px; text-anchor:start" x="299" y="114"> 1.05m | 4.00*</text>
+<text style="font-size:7px; text-anchor:start" x="316" y="95"> 1.15m | 4.15*</text>
+<text style="font-size:7px; text-anchor:start" x="332" y="77"> 1.24m | 3.92*</text>
+<text style="font-size:7px; text-anchor:start" x="341" y="58"> 1.30m | 4.05*</text>
+<text style="font-size:7px; text-anchor:start" x="365" y="40"> 1.44m | 4.17*</text>
+<text style="font-size:10.8px; text-anchor:middle" x="298" y="15">Top 10 categories by GMV (label: GMV | avg review)</text>
+</svg>
