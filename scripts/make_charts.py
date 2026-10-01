@@ -59,7 +59,13 @@ def p_cohort(ax, t):
     c = pd.read_csv(t / "a_cohort_retention.csv")
     c = c[(c.month_number >= 1) & (c.month_number <= 6)]
     pv = c.pivot(index="cohort_month", columns="month_number", values="retention_pct").sort_index()
-    im = ax.imshow(pv.values, aspect="auto", cmap="Blues", vmin=0)
+    # vector heatmap (pcolormesh + 8-step BoundaryNorm) so the SVG has no embedded PNG
+    import numpy as np
+    from matplotlib.colors import BoundaryNorm
+    bounds = np.arange(0, np.ceil(np.nanmax(pv.values) * 10) / 10 + 0.05, 0.1)
+    im = ax.pcolormesh(np.arange(pv.shape[1] + 1) - 0.5, np.arange(len(pv) + 1) - 0.5, pv.values,
+                       cmap="Blues", norm=BoundaryNorm(bounds, 256))
+    ax.set_xlim(-0.5, pv.shape[1] - 0.5); ax.set_ylim(len(pv) - 0.5, -0.5)
     ax.set_xticks(range(pv.shape[1])); ax.set_xticklabels([f"M+{i}" for i in pv.columns])
     ax.set_yticks(range(0, len(pv), 2)); ax.set_yticklabels(pv.index.str[:7][::2])
     plt.colorbar(im, ax=ax, label="% of cohort active")
